@@ -1,14 +1,29 @@
+
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (i = 0; i < array.length; i++) {
+    let difference = target - array[i];
+    for (let j = i + 1; j < array.length; j++)
+      if (array[j] === difference) return true;
+  }
+  return false;
 }
 
+  // Target sum  algorithm 
+
+
+
+
 /* 
-  Write the Big O time complexity of your function here
+
+  The function iterates through the array once using a for...of loop, which has a time complexity of O(n), where 'n' is the length of the array.
+Inside the loop, each set operation (addition and lookup) has an average time complexity of O(1) for a well-implemented set data structure.
+The overall time complexity is dominated by the loop, resulting in a final time complexity of O(n).
 */
 
 /* 
-  Add your pseudocode here
-*/
+if any two numbers in the array add up to the target -> true
+  else return false*/
 
 /*
   Add written explanation of your solution here
